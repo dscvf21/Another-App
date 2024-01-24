@@ -63,9 +63,9 @@ app.layout = html.Div(
                         html.Div(children=[
                                 html.Div(children=[
                                 html.H1('THỐNG KÊ THAY ĐỔI MARGIN',style={'color':'magneta','textAlign':'center'}),
-                                html.Div(my_table(2,df),style={'padding':'0px 0px 0px 410px'}),
+                                html.Div(my_table(2,df),style={'marginLeft':'auto','marginRight':'auto'}),
                                 html.Br(),
-                                html.Div(my_table(0,df),style={'padding':'0px 0px 0px 250px'})],
+                                html.Div(my_table(0,df),style={'marginLeft':'auto','marginRight':'auto'})],
                                 style={'border':'dotted','width':'100%'}),
                         html.Div(children=[
                             html.H1('SO SÁNH VỚI CÁC CTCK KHÁC',style={'color':'magneta','textAlign':'center'}),
