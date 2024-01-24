@@ -36,6 +36,7 @@ def my_table(i,df,id='',active_cell=None):
                     filter_action='native',
                     active_cell=active_cell,
                     fill_width=False,
+                    style_table={'overflowX': 'auto'}
                     )
     return table
 
