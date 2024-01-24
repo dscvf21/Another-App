@@ -47,14 +47,14 @@ app.layout = html.Div(
             dcc.Tab(label='Danh mục Margin', value='one-table',
                     children=[
                         html.Div(children=[
-                                html.H1('DANH MỤC MARGIN QUÝ 3 - 2023',style={'color':'magneta','textAlign':'center'}),
-                                my_table(i=3,df=df,id='table_1',active_cell={'row':0,'column':0,'column_id':'Mã CK','row_id':0}),
                                 html.Div(children=[
                                         dcc.DatePickerRange(id='input_date'),
                                         dcc.Graph(id='graph_1')])
                                         ],
-                                style={'border':'dotted'})
-                                ]
+                                        style={'border':'dotted'}),
+                                html.H1('DANH MỤC MARGIN QUÝ 3 - 2023',style={'color':'magneta','textAlign':'center'}),
+                                my_table(i=3,df=df,id='table_1',active_cell={'row':0,'column':0,'column_id':'Mã CK','row_id':0})
+                    ]
                 ),
             dcc.Tab(label='Thống kê Margin', value='many-tables',
                     children=[
