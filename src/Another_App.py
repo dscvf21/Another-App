@@ -119,7 +119,7 @@ def get_figure(active_cell,start_date,end_date):
                         fig.add_trace(go.Scatter(x=price_volume['TRADE_DATE'], y=price_volume['CLOSE_PRICE'], name="Giá(VND)",mode='lines'),secondary_y=False)
                         fig.add_trace(go.Bar(x=price_volume['TRADE_DATE'], y=price_volume['TOTAL_VOLUME'], name="Khối lượng(CP)"),secondary_y=True)
                         # Add figure title
-                        fig.update_layout(title_text="DỮ LIỆU GIÁ VÀ KHỐI LƯỢNG")
+                        fig.update_layout(title_text=f"DỮ LIỆU GIÁ VÀ KHỐI LƯỢNG {ticker}")
                         # Set x-axis title
                         fig.update_xaxes(title_text="Ngày giao dịch(Date)")
                         # Set y-axes titles
