@@ -28,6 +28,7 @@ p_v = pd.read_excel('Price and Volume.xlsx')
 # %%
 def my_table(i,df,id='',active_cell=None):
     df[i]=df[i].reset_index()
+    df[i]=df[i].rename({'index':'STT'},axis=1)
     df[i]['id']=df[i].index
     table=DataTable(id=id,
                     columns=[{'name':x,'id':x} for x in df[i].columns if x!='id'],
@@ -63,9 +64,9 @@ app.layout = html.Div(
                         html.Div(children=[
                                 html.Div(children=[
                                 html.H1('THỐNG KÊ THAY ĐỔI MARGIN',style={'color':'magneta','textAlign':'center'}),
-                                html.Div(my_table(2,df),style={'marginLeft':'auto','marginRight':'auto'}),
+                                html.Div(my_table(2,df),style={'padding':'0px 0px 0px 358px'}),
                                 html.Br(),
-                                html.Div(my_table(0,df),style={'marginLeft':'auto','marginRight':'auto'})],
+                                html.Div(my_table(0,df),style={'padding':'0px 0px 0px 178px'})],
                                 style={'border':'dotted','width':'100%'}),
                         html.Div(children=[
                             html.H1('SO SÁNH VỚI CÁC CTCK KHÁC',style={'color':'magneta','textAlign':'center'}),
