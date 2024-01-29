@@ -37,7 +37,8 @@ def my_table(i,df,id='',active_cell=None,style_data_conditional=None):
                     filter_action='native',
                     active_cell=active_cell,
                     fill_width=False,
-                    style_table={'overflowX': 'auto'}
+                    style_table={'overflowX': 'auto'},
+                    style_data_conditional=style_data_conditional
                     )
     return table
 
